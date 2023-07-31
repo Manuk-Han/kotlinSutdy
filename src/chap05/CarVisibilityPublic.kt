@@ -39,6 +39,9 @@ class Tico(_year: Int, _model: String, _power: String, _wheel: String, var name:
 
             //driver.name
             println("Driver().license = ${driver.license}")
+            driver.driving()
+        } else {
+            println("You're a burglar")
         }
     }
 }
