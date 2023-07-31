@@ -36,7 +36,7 @@ class Tico(_year: Int, _model: String, _power: String, _wheel: String, var name:
             println("super.power = ${super.power}")
             println("super.wheel = ${super.wheel}")
             super.start(key)
-            
+
             //driver.name
             println("Driver().license = ${driver.license}")
         }
