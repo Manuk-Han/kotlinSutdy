@@ -45,3 +45,32 @@ class Tico(_year: Int, _model: String, _power: String, _wheel: String, var name:
         }
     }
 }
+
+class Burglar(){
+    fun steal(anyCar: Any){
+        if(anyCar is Tico){
+            println("----[Burglar] steal()-----------")
+//            println(anyCar.power)
+//            println(anyCar.year)
+            println("anyCar.name = ${anyCar.name}")
+            println("anyCar.wheel = ${anyCar.wheel}")
+            println("anyCar.model = ${anyCar.model}")
+
+            println(anyCar.driver.license)
+            anyCar.driver.driving()
+//            println(Car.start())
+            anyCar.access("dontknow")
+        } else{
+            println("Nothing to steal")
+        }
+    }
+}
+
+fun main(){
+//    val car = Car()
+    val tico = Tico("kildong", true)
+    tico.access("gotico")
+
+    val burglar = Burglar()
+    burglar.steal(tico)
+}
